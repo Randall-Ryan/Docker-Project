@@ -1,16 +1,16 @@
-# Docker project
+# Personal project demonstating a simple client/server connection
 
 ## Create two env files:
 
 ### .client.env:
 
-#### export CLIENT_SECRET_HOST=""
+#### export CLIENT_SECRET_HOST="xx"
 
-#### export CLIENT_SECRET_PORT=""
+#### export CLIENT_SECRET_PORT="xx"
 
 ### .server.env:
 
-#### export SERVER_SECRET_PORT=""
+#### export SERVER_SECRET_PORT="xx"
 
 ## Then run the following commands:
 
