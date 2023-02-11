@@ -24,7 +24,7 @@ export CLIENT_SECRET_PORT="xx"
 export SERVER_SECRET_PORT="xx"
 ```
 
-### Step 3: run the following commands:
+### Step 3: Run the following commands:
 
 ##### $ chmod u+x run_docker_compose.sh
 
