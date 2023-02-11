@@ -1,0 +1,38 @@
+# set docker compose version
+version: '3'
+
+services:
+  # first service/container: "server"
+  server:
+    # the path 'server/' here contains the Dockerfile to use.
+    build: server/
+
+    # command executed once image is created.
+    command: python3 ./server.py
+
+    # locally defined env file
+    env_file:
+      - .server.env
+
+    # syntax: [port on local machine]:[port in docker container]
+    ports:
+      - 1234:1234
+
+  # second service/container: "client"
+  client:
+    # the path 'client/' here contains the Dockerfile to use.
+    build: client/
+
+    # command executed once image is created.
+    command: python ./client.py
+
+    # define network type as host so that container can access 'localhost'
+    network_mode: host
+    
+    # locally defined env file
+    env_file:
+      - .client.env
+
+    # waits until the defined services are ready before launching. (this says client service waits for server service to be ready)
+    depends_on:
+      - server
