@@ -1,19 +1,27 @@
-# Personal project demonstating a simple client/server connection
+# Randy Client/Server Docker Project
 
-## Create two env files:
+## This is a personal project demonstating a simple client/server connection setup with docker
 
-### .client.env:
+### Step 1: clone this repo and open project:
 
-#### export CLIENT_SECRET_HOST="xx"
+#### git clone https://github.com/Randall-Ryan/Docker-Project.git:
 
-#### export CLIENT_SECRET_PORT="xx"
+#### cd Docker-Project:
 
-### .server.env:
+### Step 2: Create two env files:
 
-#### export SERVER_SECRET_PORT="xx"
+#### touch .client.env:
 
-## Then run the following commands:
+##### export CLIENT_SECRET_HOST="xx"
 
-#### chmod u+x run_docker_compose.sh
+##### export CLIENT_SECRET_PORT="xx"
 
-#### ./run_docker_compose.sh
+#### touch .server.env:
+
+##### export SERVER_SECRET_PORT="xx"
+
+### Step 3: run the following commands:
+
+##### chmod u+x run_docker_compose.sh
+
+##### ./run_docker_compose.sh
