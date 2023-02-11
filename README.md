@@ -1,14 +1,14 @@
 # Randy Client/Server Docker Project
 
-### This is a personal project demonstating a simple client/server connection setup with docker-compose
+### This is a personal project demonstating a simple client/server socket connection using docker. The project contains postgres and metabase services with some very basic raw SQL functionality between the client & server
 
-## Step 1: Clone this repo and open project:
+## Step 1: Clone this repo and open the project:
 
 ### $ git clone https://github.com/Randall-Ryan/Docker-Project.git
 
 ### $ cd Docker-Project/
 
-## Step 2: Create two env files:
+## Step 2: Create four seperate env files with the respective variables:
 
 ### $ touch .client.env
 
