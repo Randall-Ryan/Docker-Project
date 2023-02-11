@@ -4,12 +4,16 @@
 
 ### .client.env:
 
-#### export CLIENT_SECRET_URL=""
+#### export CLIENT_SECRET_HOST=""
+
+#### export CLIENT_SECRET_PORT=""
 
 ### .server.env:
 
 #### export SERVER_SECRET_PORT=""
 
-## chmod u+x run_docker_compose.sh
+## Then run the following commands:
 
-## ./run_docker_compose.sh
+#### chmod u+x run_docker_compose.sh
+
+#### ./run_docker_compose.sh
