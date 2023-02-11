@@ -1,7 +1,7 @@
 # grab the lastest python version
 FROM python:latest
 
-# must import the 'server.py' and 'index.html' file
+# must import the 'server.py' and 'requirements.txt' file
 ADD server.py /server/
 ADD requirements.txt .
 
