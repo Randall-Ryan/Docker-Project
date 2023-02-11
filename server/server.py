@@ -18,7 +18,7 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
         """
         Takes a client input int and returns a random int between 0-10 back to the client
         """
-        _logger.debug("Handling client request for calculating a random num")
+        _logger.critical("Handling random num calculation request")
 
         # 'self.request' here is the TCP socket connected to the client
         self.data = self.request.recv(1024).strip()
