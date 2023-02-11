@@ -2,37 +2,73 @@
 version: '3'
 
 services:
-  # first service/container: "server"
+  # first service/container: "postgres"
+  postgres:
+    # official latest postgres image
+    image: 'postgres:latest'
+    # syntax: [port on local machine]:[port in docker container]
+    ports:
+      - 5432:5432
+    # locally defined env file for secret variables to be used in the container env
+    env_file:
+      - .postgres.env
+    # syntax [dir on local machine]:[dir in the container]
+    volumes:
+      -  ./db-data/:/var/lib/postgresql/data/
+
+  # second service/container: "metabase"
+  metabase:
+    # official latest metabase image
+    image: metabase/metabase
+    # syntax: [port on local machine]:[port in docker container]
+    ports:
+      - 3000:3000
+    # locally defined env file for secret variables to be used in the container env
+    env_file:
+      - .metabase.env
+    # waits until the defined services are ready before launching. (this says metabase service waits for postgres service to be ready)
+    depends_on:
+      - postgres
+    # syntax [dir on local machine]:[dir in the container]
+    volumes:
+      - dataviz_data:/metabase-data
+
+
+  # third service/container: "server"
   server:
     # the path 'server/' here contains the Dockerfile to use.
     build: server/
-
     # command executed once image is created.
     command: python3 ./server.py
-
     # locally defined env file for secret variables to be used in the container env
     env_file:
       - .server.env
-
     # syntax: [port on local machine]:[port in docker container]
     ports:
       - 1234:1234
+    # waits until the defined services are ready before launching. (this says server service waits for postgres service to be ready)
+    depends_on:
+      - postgres
 
-  # second service/container: "client"
+  # fourth service/container: "client"
   client:
     # the path 'client/' here contains the Dockerfile to use.
     build: client/
-
     # command executed once image is created.
     command: python ./client.py
-
     # define network type as host so that container can access 'localhost'
     network_mode: host
-    
     # locally defined env file for secret variables to be used in the container env
     env_file:
       - .client.env
-
     # waits until the defined services are ready before launching. (this says client service waits for server service to be ready)
     depends_on:
       - server
+
+# defined volumes for postgres/metabase
+volumes:
+  # postgres vol
+  db_data:
+
+  # metabase vol
+  dataviz_data:
