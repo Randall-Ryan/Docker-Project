@@ -33,9 +33,9 @@ if __name__ == "__main__":
     client_2 = Client("Ryan", "5656")
 
     _logger.critical(
-        f"{client_1.name}: {client_1.random_number} (input) -> {client_1.random_number} (output)"
+        f"{client_1.name}: {client_1.number} (input) -> {client_1.random_number} (output)"
     )
 
     _logger.critical(
-        f"{client_2.name}: {client_2.random_number} (input) -> {client_2.random_number} (output)"
+        f"{client_2.name}: {client_2.number} (input) -> {client_2.random_number} (output)"
     )
