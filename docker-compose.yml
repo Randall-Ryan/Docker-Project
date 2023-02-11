@@ -10,7 +10,7 @@ services:
     # command executed once image is created.
     command: python3 ./server.py
 
-    # locally defined env file
+    # locally defined env file for secret variables to be used in the container env
     env_file:
       - .server.env
 
@@ -29,11 +29,10 @@ services:
     # define network type as host so that container can access 'localhost'
     network_mode: host
     
-    # locally defined env file
+    # locally defined env file for secret variables to be used in the container env
     env_file:
       - .client.env
 
     # waits until the defined services are ready before launching. (this says client service waits for server service to be ready)
     depends_on:
       - server
-      
