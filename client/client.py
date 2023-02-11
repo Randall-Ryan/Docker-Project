@@ -2,7 +2,10 @@ import socket
 import os
 import logging
 
+
+logging.basicConfig()
 _logger = logging.getLogger(__name__)
+_logger.setLevel(logging.DEBUG)
 
 # get the host/port defined in the env file
 host = os.environ["CLIENT_SECRET_HOST"]
@@ -17,7 +20,7 @@ class Client:
         self.number = number
         self.random_number = None
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-            _logger.critical("Client connecting to server")
+            _logger.debug("Client connecting to server")
 
             # connect & send data to server
             sock.connect((host, port))
@@ -32,10 +35,10 @@ if __name__ == "__main__":
     client_1 = Client("Randy", "56")
     client_2 = Client("Ryan", "5656")
 
-    _logger.critical(
+    _logger.debug(
         f"{client_1.name}: {client_1.number} (input) -> {client_1.random_number} (output)"
     )
 
-    _logger.critical(
+    _logger.debug(
         f"{client_2.name}: {client_2.number} (input) -> {client_2.random_number} (output)"
     )

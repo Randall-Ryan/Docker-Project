@@ -3,7 +3,10 @@ import os
 import logging
 import random
 
+
+logging.basicConfig()
 _logger = logging.getLogger(__name__)
+_logger.setLevel(logging.DEBUG)
 
 # get the port
 port = int(os.environ["SERVER_SECRET_PORT"])
@@ -18,7 +21,7 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
         """
         Takes a client input int and returns a random int between 0-10 back to the client
         """
-        _logger.critical("Handling random num calculation request")
+        _logger.debug("Handling random num calculation request")
 
         # 'self.request' here is the TCP socket connected to the client
         self.data = self.request.recv(1024).strip()
