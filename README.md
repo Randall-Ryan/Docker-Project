@@ -1,6 +1,6 @@
 # Randy Client/Server Docker Project
 
-### This is a personal project demonstating a simple client/server socket connection using docker. The project contains postgres and metabase services with some very basic raw SQL functionality between the client & server
+### This is a personal project demonstrating a simple client/server socket connection using docker. The project contains postgres and metabase services (defined in the docker-compose.yml) with some very basic SQL functionality between the client & server
 
 ## Step 1: Clone this repo and open the project:
 
