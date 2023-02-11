@@ -36,3 +36,4 @@ services:
     # waits until the defined services are ready before launching. (this says client service waits for server service to be ready)
     depends_on:
       - server
+      

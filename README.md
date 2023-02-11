@@ -1,6 +1,6 @@
 # Randy Client/Server Docker Project
 
-## This is a personal project demonstating a simple client/server connection setup with docker
+## This is a personal project demonstating a simple client/server connection setup with docker-compose
 
 ### Step 1: Clone this repo and open project:
 
