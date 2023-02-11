@@ -8,7 +8,7 @@
 
 ### $ cd Docker-Project/
 
-## Step 2: Create four seperate env files with the respective variables:
+## Step 2: Create four seperate env files with their respective variables:
 
 ### $ touch .client.env
 
