@@ -1,9 +1,8 @@
 # grab the lastest python version
 FROM python:latest
 
-# must import the 'server.py' and 'index.html' file.
+# must import the 'server.py' and 'index.html' file
 ADD server.py /server/
-
 ADD requirements.txt .
 
 # install pip requirements (and pass the flag to hide the warning for installing packages as root user)

@@ -1,4 +1,3 @@
-# set docker compose version
 version: '3'
 
 services:

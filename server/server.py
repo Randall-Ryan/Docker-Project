@@ -3,6 +3,7 @@ import os
 import logging
 import random
 import psycopg2
+import pandas as pd
 
 # set logger
 logging.basicConfig()
@@ -125,6 +126,13 @@ def create_tables(tables) -> None:
         cursor.execute(
             "CREATE TABLE test_users (id serial PRIMARY KEY, original_num integer, random_num integer, name varchar);"
         )
+
+    # TODO: implement animals
+    # create a df of animals
+    data = {"names": ["cow", "chicken", "sheep"], "ages": [10, 20, 30]}
+    animals_df = pd.DataFrame(data)
+    _logger.debug(animals_df)
+
     if "test_animals" in tables:
         # create the animal table
         cursor.execute(

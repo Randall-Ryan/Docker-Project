@@ -20,6 +20,7 @@ class Client:
         self.name = name
         self.number = number
         self.random_number = None
+
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
             _logger.debug("Client connecting to server")
 

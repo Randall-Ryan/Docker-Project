@@ -13,51 +13,51 @@
 ### $ touch .client.env
 
 ```
-export CLIENT_SECRET_HOST="xx"
+export CLIENT_SECRET_HOST="x"
 
-export CLIENT_SECRET_PORT="xx"
+export CLIENT_SECRET_PORT="x"
 ```
 
 ### $ touch .server.env
 
 ```
-export SERVER_SECRET_PORT="xx"
+export SERVER_SECRET_PORT="x"
 
-export SERVER_SECRET_DBHOST="xx"
+export SERVER_SECRET_DBHOST="x"
 
-export SERVER_SECRET_DBNAME="xx"
+export SERVER_SECRET_DBNAME="x"
 
-export SERVER_SECRET_DBUSER="xx"
+export SERVER_SECRET_DBUSER="x"
 
-export SERVER_SECRET_DBPASS="xx"
+export SERVER_SECRET_DBPASS="x"
 ```
 
 ### $ touch .metabase.env
 
 ```
-export MB_DB_TYPE="xx"
+export MB_DB_TYPE="x"
 
-export MB_DB_DBNAME="xx"
+export MB_DB_DBNAME="x"
 
-export MB_DB_PORT="xx"
+export MB_DB_PORT="x"
 
-export MB_DB_USER="xx"
+export MB_DB_USER="x"
 
-export MB_DB_PASS="xx"
+export MB_DB_PASS="x"
 
-export MB_DB_HOST="xx"
+export MB_DB_HOST="x"
 
-export MB_DB_FILE="xx"
+export MB_DB_FILE="x"
 ```
 
 ### $ touch .postgres.env
 
 ```
-export POSTGRES_DB="xx"
+export POSTGRES_DB="x"
 
-export POSTGRES_USER="xx"
+export POSTGRES_USER="x"
 
-export POSTGRES_PASSWORD="xx"
+export POSTGRES_PASSWORD="x"
 ```
 
 ## Step 3: Run the following commands:
